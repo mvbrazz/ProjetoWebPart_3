@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
+const PORT = process.env.PORT || 3000;
 
 app.use((req,res,next) => {
     res.header("Access-Control-Allow-Origin","*");  //Escolhendo quem pode estar fazendo o uso da API
@@ -62,5 +62,5 @@ app.post('/AdicionaHerois', (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log(`Example app listening at http://localhost:3000`);
+    console.log(`Example app listening at http://localhost:`+PORT);
 })
