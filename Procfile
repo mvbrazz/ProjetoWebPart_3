@@ -1,1 +1,1 @@
-web: html index.html
+web: node controller.js
