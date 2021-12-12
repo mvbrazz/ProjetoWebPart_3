@@ -21,7 +21,7 @@ app.set('view engine','hbs');
 app.set('views',path.join(__dirname, 'view'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(cookieParser());
+//app.use(cookieParser());
 
 const {BuscarTodosHerois,AdicionaHerois} = require('../model/funcoes');
 const { cookie } = require('express/lib/response');
